@@ -1,0 +1,22 @@
+{
+  "name": "I Would Rather",
+  "version": "1.0.0",
+  "homepage": "https://github.com/tmanley1985/lh.iwouldrather.net",
+  "authors": [
+    "tmanley1985 <tmanley1985@gmail.com>"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "fontawesome": "~4.3.0",
+    "bootstrap-sass-official": "~3.3.4"
+  },
+  "description": "Bad Movie Blog",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
