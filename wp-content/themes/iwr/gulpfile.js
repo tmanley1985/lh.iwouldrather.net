@@ -33,16 +33,12 @@ gulp.task('icons', function() {
 gulp.task('css', function() {
     return gulp.src('src/sass/iwr.scss')
     .pipe(sass())
+    .pipe(minify())
     .pipe(gulp.dest('css'));
 });
 
 // Call Gulp styles to call this function
-gulp.task('styles', function(){
-	// Always return streams, Gulp uses this to know when this task has ran
-	//Pipe in various commands in chron order
-	//Concat param needs name for concatenated file
-	return gulp.src('src/css/*.css')
-	.pipe(concat('app.min.css'))
-	.pipe(minify())
-	.pipe(gulp.dest('css'));
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+    gulp.watch('src/sass/*.scss', ['css']);
 });
